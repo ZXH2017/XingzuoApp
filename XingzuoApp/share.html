@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>分享页面</title>
+		<link rel="stylesheet" href="jquery.mobile-1.4.5-min/jquery.mobile-1.4.5.min.css" />
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.5-min/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/detailsToday.js"></script>
+		<script type="text/javascript" src="js/details.js"></script>
+
+		<style type="text/css">
+			#share_page {
+				background-image: url(img/shareBkg.jpg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" id="share_page">
+			<div data-role="header">
+				<h1>分享到...</h1>
+			</div>
+
+			<div data-role="main">
+				<!--				<a href="#weixinShare_page" class="ui-btn-active"><input name="weixinBtn" id="weixinBtn" type="submit" value="微信" /></a>-->
+				<!--<a href="permit.html#permit_page" class="ui-btn-active"><input name="weixinBtn" id="weixinBtn" type="submit" value="微信" /></a>
+					<a href="permit.html#permit_page" class="ui-btn-active"><input name="qqBtn" id="qqBtn" type="submit" value="QQ" /></a>-->
+				<input name="weixinBtn" id="weixinBtn" type="submit" value="微信" />
+				<input name="qqBtn" id="qqBtn" type="submit" value="QQ" />
+			</div>
+
+			<button><a onclick="backF()">返回首页</a></button>
+		</div>
+
+		<!--微信分享-->
+		<!--<div data-role= "page" id="weixinShare_page">
+			<div id="" data-role="main">
+			<input type="submit" value="发送给微信好友"/>
+			<input type="submit" value="分享到微信朋友圈"/>
+			<a href="#share_page"><input type="submit" value="取消"/></a>
+			</div>
+		</div>-->
+
+		<!--QQ分享-->
+		<!--<div data-role= "page" id="qqShare_page">
+			<div id="" data-role="main">
+			<input type="submit" value="发送给qq好友"/>
+			<input type="submit" value="分享到qq空间"/>
+			<a href="#share_page"><input type="submit" value="取消"/></a>
+			</div>
+		</div>-->
+
+		<script type="text/javascript">
+			function plusReady() {
+				// 获取登录认证通道
+				plus.oauth.getServices(function(services) {
+					for(var i in services) {
+						$("#qqBtn").append("<div class='ui-block-a'><a href='' class='ui-btn'>" + services[i].description + "登录</a></div>");
+					}
+
+				}, function(e) {
+					alert("获取失败");
+				});
+			}
+			document.addEventListener('plusready', plusReady, false);
+			
+			function backF () {
+				window.location.href="index1.html";
+			}
+		</script>
+
+		<script type="text/javascript">
+			//			$("#weixinBtn").on("tap",function(){
+			//				var openw = plus.webview.create("permit.html","permit.html");
+			//				openw.show("slide-in-right",800)
+			//			})
+
+			$("#qqBtn").on("tap", function() {
+				var openw = plus.webview.create("permit.html", "permit.html");
+				openw.show("slide-in-right", 800)
+			})
+		</script>
+
+	</body>
+
+</html>

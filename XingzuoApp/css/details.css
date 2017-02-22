@@ -1,0 +1,30 @@
+.infoTh{
+	font-weight:bold;
+	color: darkslategray;
+}
+.info0,.info1,.info2,.info3,.info4,.info5,.info6,.info7,.info8,.info9,.info10{
+	font-weight: normal;
+	color:gray;
+}
+
+.start{
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+}
+
+.info11{
+	background: url(../img/pic1.PNG) no-repeat;
+}
+.info12{
+	background: url(../img/pic2.PNG)  no-repeat;
+}
+.info13{
+	background: url(../img/pic3.PNG)  no-repeat;
+}
+.info14{
+	background: url(../img/pic4.PNG)  no-repeat;
+}
+.info15{
+	background: url(../img/pic5.PNG)  no-repeat;
+}

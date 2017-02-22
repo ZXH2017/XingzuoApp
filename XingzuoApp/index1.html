@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5-min/jquery.mobile-1.4.5.min.css" />
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.mobile-1.4.5-min/jquery.mobile-1.4.5.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/details.css" />
+
+	</head>
+	<style type="text/css">
+		* {
+			color: white;
+			
+		}
+		
+		
+	</style>
+
+	<body>
+		<table border="0px" background="img/beijing.jpg" width="100%" height="550px">
+			<tr>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="#" id="baiyang"><img src="img/baiyang_1.png" /></a>
+						<br/>
+						<a onclick="X1()">
+							<b>白羊座</b>
+						<br/>
+						<b>03.21-04.19</b></a>
+
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="jinniu"><img src="img/jinniu_1.png" /></a>
+						<br />
+						<a onclick="X2()"><b >金牛座</b>
+						<br/>
+						<b>04.20-05.20</b></a>
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)"  href="" id="shuangzi"><img src="img/shuangzi_1.png" /></a>
+						<br />
+						<a onclick="X3()"><b>双子座</b>
+						<br />
+						<b>04.20-05.20</b></a>
+					</center>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="juxie"><img src="img/juxie_1.png" /></a>
+						<br />
+						<a onclick="X4()"><b>巨蟹座</b>
+						<br />
+						<b>06.22-07.22</b></a>
+
+				</td>
+				</center>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="shizi"><img src="img/shizi_1.png" /></a>
+						<br />
+						<a onclick="X5()"><b>狮子座</b>
+						<br />
+						<b>07.23-08.22</b></a>
+				</td>
+				</center>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="chunv"><img src="img/chunv_1.png" /></a>
+						<br />
+						<a onclick="X6()"><b>处女座</b>
+						<br />
+						<b>08.23-09.22</b></a>
+				</td>
+				</center>
+			</tr>
+
+			<tr>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="tiancheng"><img src="img/tiancheng_1.png" /></a>
+						<br />
+						<a onclick="X7()"><b>天秤座</b>
+						<br />
+						<b>09.23-10.23</b></a>
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="tianxie"><img src="img/tianxie_1.png" /></a>
+						<br />
+						<a onclick="X8()"><b>天蝎座</b>
+						<br />
+						<b>10.24-11.22</b></a>
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="sheshou"><img src="img/sheshou_1.png" /></a>
+						<br />
+						<a onclick="X9()"><b>射手座</b>
+						<br />
+						<b>11.23-12.21</b></a>
+				</td>
+				</center>
+			</tr>
+
+			<tr>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="mojie"><img src="img/mojie_1.png"></a>
+						<br />
+						<a onclick="X10()"><b>摩羯座</b>
+						<br />
+						<b>12.22-01.19</b></a>
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="shuiping"><img src="img/shuiping_1.png" /></a>
+						<br />
+						<a onclick="X11()"><b>水瓶座</b>
+						<br />
+						<b>01.20-02.18</b></a>
+					</center>
+				</td>
+				<td>
+					<center>
+						<a onclick="asd(this.id)" href="" id="shuangyu"><img src="img/shuangyu_1.png" /></a>
+						<br />
+						<a onclick="X12()"><b>双鱼座</b>
+						<br />
+						<b>02.19-03.20</b></a>
+					</center>
+				</td>
+			</tr>
+
+		</table>
+	</body>
+	<script type="text/javascript">
+		function asd(id) {
+			var INDEX_START_CH = $("#" + id).next().next().html();
+			sessionStorage.setItem("INDEX_START_CH", INDEX_START_CH);
+			sessionStorage.setItem("INDEX_START_EN", id);
+			window.location.href = "detailsToday.html";
+		}
+		function X1(){
+			window.location.href = "baiyang.html";
+		}
+		function X2(){
+			window.location.href = "jinniu.html";
+		}
+		function X3(){
+			window.location.href = "shuangzi.html";
+		}
+		function X4(){
+			window.location.href = "juxie.html";
+		}
+		function X5(){
+			window.location.href = "shizi.html";
+		}
+		function X6(){
+			window.location.href = "chunv.html";
+		}
+		function X7(){
+			window.location.href = "tianping.html";
+		}
+		function X8(){
+			window.location.href = "tianxie.html";
+		}
+		function X9(){
+			window.location.href = "sheshou.html";
+		}
+		function X10(){
+			window.location.href = "mojie.html";
+		}
+		function X11(){
+			window.location.href = "shuiping.html";
+		}
+		function X12(){
+			window.location.href = "shuangyu.html";
+		}
+	</script>
+
+</html>
